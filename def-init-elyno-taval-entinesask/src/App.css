@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* give 3D context for rotateY */
+.val-root {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffded0;
+  perspective: 800px; /* makes rotateY look 3D */
+}
+
+.heart-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.heart-aura {
+  position: absolute;
+  width: 20vw;           /* slightly larger than main */
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 0 #ff9db5);
+  opacity: 0.4;
+  z-index: 1;
+  pointer-events: none;   /* so clicks go to the main heart */
+  filter: blur(7px);
+}
+
+.heart-img {
+  width: 20vw;        /* tweak this */
+  cursor: pointer;
+  user-select: none;
+  /* if the image is pixel art, this keeps it crispy */
+  image-rendering: pixelated;
+}
+
+.question-block {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+}
