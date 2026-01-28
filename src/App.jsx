@@ -69,7 +69,7 @@ function App() {
             textAlign: "center"
           }}
         >
-          Tap and hold to charge the heart 💖
+          Tap and hold to ccapture Mal's heart 💖
         </motion.div>
       )}
 
